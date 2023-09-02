@@ -1,0 +1,80 @@
+{
+  "consumer": {
+    "name": "react-client"
+  },
+  "interactions": [
+    {
+      "description": "un registro para hacer un checkIn",
+      "providerStates": [
+        {
+          "name": "crear checkIn"
+        }
+      ],
+      "request": {
+        "body": {
+          "codigoSeguridad": "1234",
+          "descripcion": "Sano",
+          "equipaje": [
+            {
+              "Descripcion": "maleta azul",
+              "NumeroEtiqueta": "1234",
+              "PesoEquipaje": "10"
+            },
+            {
+              "Descripcion": "maleta gris",
+              "NumeroEtiqueta": "45t43g4",
+              "PesoEquipaje": "3"
+            }
+          ],
+          "estadoPaciente": "Sano",
+          "key": "22ce4c2f-510f-4f9b-a6c1-40869a1181de",
+          "keyVuelo": "22ce4c2f-510f-4f9b-a6c1-2343rf232323",
+          "numeroAsiento": "1"
+        },
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "method": "POST",
+        "path": "/checkin/registro"
+      },
+      "response": {
+        "body": {
+          "key": "22ce4c2f-510f-4f9b-a6c1-40869a1181de"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.1.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.7",
+      "models": "1.1.9"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "checkIn-service"
+  }
+}
