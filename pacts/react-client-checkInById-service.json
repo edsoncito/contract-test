@@ -12,33 +12,22 @@
       ],
       "request": {
         "method": "GET",
-        "path": "/checkin/key",
-        "query": {
-          "key": [
-            "22ce4c2f-510f-4f9b-a6c1-40869a1181de"
-          ]
-        }
+        "path": "/checkin/byId/662c17bc-1504-47af-b86d-dba49c6fa050"
       },
       "response": {
         "body": {
-          "codigoSeguridad": "1234",
-          "descripcion": "Sano",
-          "equipaje": [
+          "CodigoSeguridad": "2B6u751f0F",
+          "Descripcion": "0",
+          "EquipajeDto": [
             {
               "Descripcion": "maleta azul",
-              "NumeroEtiqueta": "1234",
-              "PesoEquipaje": "10"
-            },
-            {
-              "Descripcion": "maleta gris",
-              "NumeroEtiqueta": "45t43g4",
-              "PesoEquipaje": "3"
+              "NumeroEtiqueta": "9fskf99s0",
+              "PesoEquipaje": 12.3
             }
           ],
-          "estadoPaciente": "Sano",
-          "key": "22ce4c2f-510f-4f9b-a6c1-40869a1181de",
-          "keyVuelo": "22ce4c2f-510f-4f9b-a6c1-2343rf232323",
-          "numeroAsiento": "1"
+          "EstadoPaciente": false,
+          "KeyVuelo": "2550fa39-efa6-4312-a723-000000000234",
+          "NumeroAsiento": 12
         },
         "headers": {
           "Content-Type": "application/json"

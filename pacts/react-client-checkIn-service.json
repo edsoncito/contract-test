@@ -12,24 +12,19 @@
       ],
       "request": {
         "body": {
-          "codigoSeguridad": "1234",
-          "descripcion": "Sano",
-          "equipaje": [
+          "Descripcion": "0",
+          "EquipajeDto": [
             {
               "Descripcion": "maleta azul",
-              "NumeroEtiqueta": "1234",
-              "PesoEquipaje": "10"
-            },
-            {
-              "Descripcion": "maleta gris",
-              "NumeroEtiqueta": "45t43g4",
-              "PesoEquipaje": "3"
+              "NumeroEtiqueta": "9fskf99s0",
+              "PesoEquipaje": 12.3
             }
           ],
-          "estadoPaciente": "Sano",
-          "key": "22ce4c2f-510f-4f9b-a6c1-40869a1181de",
-          "keyVuelo": "22ce4c2f-510f-4f9b-a6c1-2343rf232323",
-          "numeroAsiento": "1"
+          "EstadoPaciente": false,
+          "KeyAsiento": "d7a92b9-233-4322b-9905-16c84123b0d6e",
+          "KeyVenta": "c9deb166-a2b7-46d9-80c4-23423423432",
+          "KeyVuelo": "2550fa39-efa6-4923434312-a5a723-234",
+          "NumeroAsiento": 12
         },
         "headers": {
           "Accept": "application/json",
@@ -39,9 +34,7 @@
         "path": "/checkin/registro"
       },
       "response": {
-        "body": {
-          "key": "22ce4c2f-510f-4f9b-a6c1-40869a1181de"
-        },
+        "body": "282c3da9-2573-48e2-aa2b-b0b104bfa743",
         "headers": {
           "Content-Type": "application/json"
         },

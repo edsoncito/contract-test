@@ -48,7 +48,7 @@ describe("El API de checkIn", () => {
             console.log(response);
             expect(response).to.be.not.null;
             expect(response).to.be.a.string;
-            expect(response.key).equal(createCheckInResponse.key);
+            expect(response).equal(createCheckInResponse);
           });
       });
     });

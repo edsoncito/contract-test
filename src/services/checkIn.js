@@ -6,27 +6,20 @@ export class CheckInService {
       endpoint = "http://localhost:8080";
     }
   }
-  create = (
-    key,
-    codigoSeguridad,
-    estadoPaciente,
-    descripcion,
-    numeroAsiento,
-    keyVuelo,
-    equipaje
-  ) => {
+
+  create = (EstadoPaciente, Descripcion, NumeroAsiento, KeyVenta, KeyVuelo, KeyAsiento, EquipajeDto) => {
     return new Promise((resolve, reject) => {
       axios
         .post(
           this.endpoint + "/checkin/registro",
           {
-            key,
-            codigoSeguridad,
-            estadoPaciente,
-            descripcion,
-            numeroAsiento,
-            keyVuelo,
-            equipaje,
+            EstadoPaciente,
+            Descripcion,
+            NumeroAsiento,
+            KeyVenta,
+            KeyVuelo,
+            KeyAsiento,
+            EquipajeDto,
           },
           {
             headers: {
@@ -35,6 +28,7 @@ export class CheckInService {
           }
         )
         .then((response) => {
+          console.log(response.data);
           resolve(response.data);
         })
         .catch((error) => {

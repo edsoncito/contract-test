@@ -1,0 +1,91 @@
+{
+  "consumer": {
+    "name": "react-client"
+  },
+  "interactions": [
+    {
+      "description": "un registro para hacer un checkIn",
+      "providerStates": [
+        {
+          "name": "obtiene un array checkIn"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/checkin/"
+      },
+      "response": {
+        "body": [
+          {
+            "CodigoSeguridad": "60Zo41179z",
+            "Descripcion": "0",
+            "EstadoPaciente": false,
+            "KeyAsiento": "0d7a92b9-0233-322b-9905-6c84123b0d6e",
+            "KeyVenta": "c9deb166-a2b7-46d9-80c4-023423423432",
+            "KeyVuelo": "2550fa39-efa6-4312-a723-000000000234",
+            "NumeroAsiento": 12,
+            "equipaje": [
+              {
+                "Descripcion": "maleta azul",
+                "NumeroEtiqueta": "9fskf99s0",
+                "PesoEquipaje": 12.3,
+                "key": "6ffbc201-9732-4b25-a37e-2dbca324400e"
+              }
+            ],
+            "key": "7b1c56bb-1115-4a9a-b36f-8da5b84dd96c"
+          },
+          {
+            "CodigoSeguridad": "G8XW3n4089",
+            "Descripcion": "0",
+            "EstadoPaciente": false,
+            "KeyAsiento": "0d7a92b9-0233-322b-9905-6c84123b0d6e",
+            "KeyVenta": "c9deb166-a2b7-46d9-80c4-023423423432",
+            "KeyVuelo": "2550fa39-efa6-4312-a723-000000000234",
+            "NumeroAsiento": 12,
+            "equipaje": [
+              {
+                "Descripcion": "maleta azul",
+                "NumeroEtiqueta": "9fskf99s0",
+                "PesoEquipaje": 12.3,
+                "key": "f366b0d9-151f-45f7-bc0b-71d965d0ab59"
+              }
+            ],
+            "key": "8da9d28b-6c27-4607-a53d-66d49738991d"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.1.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.7",
+      "models": "1.1.9"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "checkInGetAll-service"
+  }
+}

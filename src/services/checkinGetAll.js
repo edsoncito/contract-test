@@ -1,5 +1,5 @@
 import axios from "axios";
-export class CheckInServiceGetById {
+export class CheckInServiceGetAll {
   constructor(endpoint) {
     this.endpoint = endpoint;
     if (!endpoint) {
@@ -7,12 +7,11 @@ export class CheckInServiceGetById {
     }
   }
 
-  getById = (id) => {
+  getAll = () => {
     return new Promise((resolve, reject) => {
       axios
-        .get(this.endpoint + "/checkin/byId/" + id, {})
+        .get(this.endpoint + "/checkin/", {})
         .then((response) => {
-          console.log("edntroooo", response.data);
           resolve(response.data);
         })
         .catch((error) => {
