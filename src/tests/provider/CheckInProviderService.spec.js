@@ -6,7 +6,7 @@ let port;
 let opts;
 describe("Pact Verification", () => {
   before(async () => {
-    port = 80;
+    port = 8080;
     opts = {
       provider: "checkIn-service",
       providerBaseUrl: `http://localhost:${port}`,

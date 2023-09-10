@@ -36,13 +36,13 @@ describe("El API de checkIn", () => {
         checkInService = new CheckInService(mockServer.url);
         return checkInService
           .create(
-            createCheckInBody.key,
-            createCheckInBody.codigoSeguridad,
-            createCheckInBody.estadoPaciente,
-            createCheckInBody.descripcion,
-            createCheckInBody.numeroAsiento,
-            createCheckInBody.keyVuelo,
-            createCheckInBody.equipaje
+            createCheckInBody.EstadoPaciente,
+            createCheckInBody.Descripcion,
+            createCheckInBody.NumeroAsiento,
+            createCheckInBody.KeyVenta,
+            createCheckInBody.KeyVuelo,
+            createCheckInBody.KeyAsiento,
+            createCheckInBody.EquipajeDto
           )
           .then((response) => {
             console.log(response);

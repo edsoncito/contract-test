@@ -3,7 +3,7 @@ export class CheckInService {
   constructor(endpoint) {
     this.endpoint = endpoint;
     if (!endpoint) {
-      endpoint = "http://localhost:80";
+      endpoint = "http://localhost:8080";
     }
   }
   create = (
